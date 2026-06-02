@@ -1,0 +1,63 @@
+#myName{
+    color: purple;
+    font-size: 48px;
+    text-align: center;
+}
+.pclass{
+    color: gray;
+    font-style: italic;
+    }
+    div{
+        align-items: center;
+    }
+    #link{
+        text-decoration: none;
+        color: orange;
+    
+    }
+    .boxing{
+        background: red;
+        
+    }
+    .bxmdl{
+padding: 20px;
+background: powderblue;
+border: 2px solid black;
+margin: 200px;
+outline-style: 1px dotted black;
+    }
+    p.bxmdl{
+        text-align: center;
+        font-family: Algerian;
+        font-size: 70px;
+        color: black;
+        text-outline: 2px solid black;
+    }
+   img{
+    width: 250px;
+    height: 400px;
+    border-radius: 5%;
+    border: 2px solid black;
+   }
+   .card{
+    width: 300px;
+    height: 500px;
+    background: tomato;
+    border-radius: 5%;
+    border: 2px solid black;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+   }
+   .card-container{
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    background: blue;
+    margin: 20px;
+    border-radius: 5%;
+   
+   }
