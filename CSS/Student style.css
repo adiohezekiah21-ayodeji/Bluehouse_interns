@@ -1,0 +1,99 @@
+body{
+    background-color: rgb(255, 160, 122, 0.4);
+}
+
+footer{
+    background-color: tomato;
+    color: white;
+}
+
+h1{
+    font-family: Algerian;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+}
+
+h1:hover{
+    background-color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    border: 0.5em solid yellow;
+
+}
+
+#profile-image{
+border-radius: 50%;
+width: 10rem;
+height: 12rem;
+margin: 0.625rem;
+}
+
+.text-container{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-display: auto;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.img_txt{
+    border: 3px solid red;
+    background-color: rgb(255, 192, 203, 0.7);
+    display: flex;
+    width: 30rem;
+    margin: auto;
+    background-image: url(unijos_logo_license.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 5em;
+    outline-width: 1em;
+    outline-color: purple;
+    outline-style: double;
+    padding: 1rem;
+   
+}
+
+.playwrite-au-vic-guides-regular {
+  font-family: "Playwrite AU VIC Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.s{
+    background-color: rgb(54, 147, 201);
+    color: white;
+    text-decoration: dashed;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.img_txt:hover{
+    background-color: yellow;
+    border: 3px solid white;
+    outline-style: groove;
+    outline-color: blue;
+    margin: 50px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+footer{
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   padding: 0.02rem;
+}
+
+footer:hover{
+    background-color: blue;
+}
+
+
+
