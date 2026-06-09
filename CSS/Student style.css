@@ -7,19 +7,24 @@ footer{
     color: white;
 }
 
+marquee{
+    background: tomato;
+    padding: 0rem;
+    margin-top: 0rem;
+}
+
 h1{
-    font-family: Algerian;
-    background-color: red;
+    font-family: Audiowide, cursive;
     color: white;
     text-align: center;
-    font-size: 70px;
+    text-shadow: 5px 5px 4px black;
+    font-size: 3rem;
 }
 
 h1:hover{
-    background-color: blue;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    border: 0.5em solid yellow;
+    
 
 }
 
@@ -30,6 +35,13 @@ height: 12rem;
 margin: 0.625rem;
 }
 
+.img_txt:hover #profile-image{
+    width: 14rem;
+    height: 15rem;
+    border: 0.2em solid white;
+    border-radius: 50%;
+}
+
 .text-container{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: normal;
@@ -38,12 +50,21 @@ margin: 0.625rem;
     padding: 1rem;
 }
 
+.img_txt:hover .text-container{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-display: auto;
+    font-size: 1.25rem;
+    padding: 1.25rem;   
+}
+
 .img_txt{
     border: 3px solid red;
     background-color: rgb(255, 192, 203, 0.7);
     display: flex;
     width: 30rem;
     margin: auto;
+    margin-top: 2rem;
     background-image: url(unijos_logo_license.png);
     background-position: right top;
     background-repeat: no-repeat;
@@ -74,8 +95,11 @@ margin: 0.625rem;
     border: 3px solid white;
     outline-style: groove;
     outline-color: blue;
-    margin: 50px;
-    width: 400px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 0.625rem;
+    width: 32rem;
+    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
