@@ -1,0 +1,55 @@
+.px-4 py-5 my-5 text-center {
+    margin-top: 1rem;
+}
+
+.btn btn-primary d-inline-flex align-items-center{
+    margin-top: 0.1rem;
+}
+
+.btn btn-outline-secondary d-inline-flex align-items-center{
+    margin-top: 0.1rem;
+}
+
+.MAIN{
+    background-color: #b3bcc5;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 20%
+    margin-top: 10%
+}
+
+.parasize{
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.container{
+    background-color: hwb(210 97% 2%);
+    padding: 0.1rem;
+}
+
+.parasize2{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.row-mv gy-5{
+    margin-top: 2rem;
+    background-color: rgb(89, 103, 117, 0.4);
+    border-radius: 1rem;
+    padding: 1rem;
+   display: flex;
+   flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+grid2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: rgb(89, 103, 117, 0.4);
+    border-radius: 1rem;
+    }

@@ -3,6 +3,15 @@
     font-size: 48px;
     text-align: center;
 }
+#myImage{
+    ali
+    justify-content: center;
+    border-radius: 50%;
+    border-style: 4px dotted red;
+width: fit-content;
+height: fit-content;
+    
+}
 .pclass{
     color: gray;
     font-style: italic;
@@ -34,14 +43,14 @@ outline-style: 1px dotted black;
         text-outline: 2px solid black;
     }
    img{
-    width: 250px;
-    height: 400px;
+    width: 350px;
+    height: 500px;
     border-radius: 5%;
     border: 2px solid black;
    }
    .card{
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 600px;
     background: tomato;
     border-radius: 5%;
     border: 2px solid black;
@@ -54,10 +63,11 @@ outline-style: 1px dotted black;
    }
    .card-container{
     display: flex;
-    width: 1000px;
-    height: 600px;
+    width: 1300px;
+    height: 700px;
     background: blue;
     margin: 20px;
     border-radius: 5%;
    
    }
+  

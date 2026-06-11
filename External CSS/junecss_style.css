@@ -1,0 +1,35 @@
+h1{
+    font-size: 100px;
+    font-weight: 7;
+    line-height: 1.5;
+    color: darkgoldenrod;
+}
+h1:hover{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.playwrite-au-vic-guides-regular {
+  font-family: "Playwrite AU VIC Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{
+    font-size: 50px;
+    color: blue;
+    font-family: 'Playwrite AU VIC Guides', cursive;
+}
+
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p{
+    font-family: 'Black Ops One', system-ui;
+    font-size: 20px;
+    color: orange
+    
+}
