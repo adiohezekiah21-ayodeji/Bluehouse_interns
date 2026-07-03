@@ -76,4 +76,33 @@ footer{
     align-items: center;
     gap: 1rem;
    }
+
+   #idh1{
+    text-align: center;
+    color: rgb(3, 3, 39);
+    font-size: 4rem;
+   }
+   #idp{
+    text-align: center;
+    font-style: italic;
+   }
+.ashbg{
+    background-color: #b3bcc5;
+
+}
+
+.lksize{
+    font-size: 1.5rem;
+}
+
+.marquee{
+    font-size: 2rem;
+        font-weight: bold;
    
+}
+
+.footlk{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+  
