@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness — Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">+</span> Vitae
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="nutrition.html" class="nav-link">Nutrition</a>
+        <a href="fitness.html" class="nav-link nav-link--active">Fitness</a>
+        <a href="mental-wellness.html" class="nav-link">Mental Wellness</a>
+      </nav>
+
+      <a href="#" class="btn btn-primary btn-small">Start Journey</a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="inner-hero" style="background-image:url('images/fitness-hero.jpg')">
+      <div class="container">
+        <p class="tag-pill tag-pill--fitness">⚡ Fitness</p>
+        <h1 class="inner-hero-title">Train hard. <em class="text-orange">Recover smarter.</em></h1>
+        <p class="inner-hero-sub">
+          Evidence-based programming for strength, endurance, and longevity.
+          Designed by coaches, built for humans.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== TRAINING SCHEDULE ===== -->
+    <section class="content-section">
+      <div class="container">
+        <p class="eyebrow eyebrow--section">Training Schedule</p>
+        <h2 class="section-title">Your week at a glance</h2>
+
+        <div class="day-grid">
+          <div class="day-card">
+            <p class="day-name">MON</p>
+            <div class="day-bar-track"><div class="day-bar-fill" style="height:85%;background:var(--green)"></div></div>
+            <p class="day-type">Strength</p>
+          </div>
+          <div class="day-card">
+            <p class="day-name">TUE</p>
+            <div class="day-bar-track"><div class="day-bar-fill" style="height:55%;background:var(--orange)"></div></div>
+            <p class="day-type">Cardio</p>
+          </div>
+          <div class="day-card">
+            <p class="day-name">WED</p>
+            <div class="day-bar-track"><div class="day-bar-fill" style="height:40%;background:var(--purple)"></div></div>
+            <p class="day-type">Yoga</p>
+          </div>
+          <div class="day-card">
+            <p class="day-name">THU</p>
+            <div class="day-bar-track"><div class="day-bar-fill" style="height:95%;background:#e8543a"></div></div>
+            <p class="day-type">HIIT</p>
+          </div>
+          <div class="day-card">
+            <p class="day-name">FRI</p>
+            <div class="day-bar-track"><div class="day-bar-fill" style="height:85%;background:var(--green)"></div></div>
+            <p class="day-type">Strength</p>
+          </div>
+          <div class="day-card">
+            <p class="day-name">SAT</p>
+            <div class="day-bar-track"><div class="day-bar-fill" style="height:50%;background:var(--yellow)"></div></div>
+            <p class="day-type">Run</p>
+          </div>
+          <div class="day-card">
+            <p class="day-name">SUN</p>
+            <div class="day-bar-track"><div class="day-bar-fill" style="height:15%;background:var(--text-gray-soft)"></div></div>
+            <p class="day-type">Rest</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORKOUT LIBRARY ===== -->
+    <section class="content-section">
+      <div class="container">
+        <p class="eyebrow eyebrow--section">Workout Library</p>
+        <h2 class="section-title">Find your perfect session</h2>
+
+        <div class="media-grid">
+          <article class="media-card" style="background-image:url('images/workout-full-body-hiit.jpg')">
+            <div class="media-card-top"><span class="tag-pill tag-pill--fitness">Intermediate</span></div>
+            <span class="media-icon">⚡</span>
+            <div class="media-card-body">
+              <h3>Full Body HIIT</h3>
+              <p>8 compound movements, 40/20 intervals. No equipment needed. Maximum metabolic burn.</p>
+              <div class="media-meta"><span>⏱ 30 min</span><span>🔥 340 kcal</span></div>
+            </div>
+          </article>
+
+          <article class="media-card" style="background-image:url('images/workout-yoga-flow.jpg')">
+            <div class="media-card-top"><span class="tag-pill tag-pill--mental">All Levels</span></div>
+            <span class="media-icon">🧘</span>
+            <div class="media-card-body">
+              <h3>Yoga Flow</h3>
+              <p>Sun salutations, warrior sequences, and deep hip openers. Flexibility and breath in sync.</p>
+              <div class="media-meta"><span>⏱ 45 min</span><span>🔥 180 kcal</span></div>
+            </div>
+          </article>
+
+          <article class="media-card" style="background-image:url('images/workout-strength-training.jpg')">
+            <div class="media-card-top"><span class="tag-pill" style="background:var(--pink-dark);color:var(--pink)">Advanced</span></div>
+            <span class="media-icon">🏋️</span>
+            <div class="media-card-body">
+              <h3>Strength Training</h3>
+              <p>Progressive overload protocol. Upper/lower split with compound and isolation work.</p>
+              <div class="media-meta"><span>⏱ 50 min</span><span>🔥 420 kcal</span></div>
+            </div>
+          </article>
+
+          <article class="media-card" style="background-image:url('images/workout-morning-run.jpg')">
+            <div class="media-card-top"><span class="tag-pill tag-pill--nutrition">Beginner</span></div>
+            <span class="media-icon">🏃</span>
+            <div class="media-card-body">
+              <h3>Morning Run</h3>
+              <p>5K steady-state with 2 one-minute surges. Build aerobic base and mental toughness.</p>
+              <div class="media-meta"><span>⏱ 35 min</span><span>🔥 280 kcal</span></div>
+            </div>
+          </article>
+
+          <article class="media-card" style="background-image:url('images/workout-core-mobility.jpg')">
+            <div class="media-card-top"><span class="tag-pill tag-pill--mental">All Levels</span></div>
+            <span class="media-icon">🌀</span>
+            <div class="media-card-body">
+              <h3>Core &amp; Mobility</h3>
+              <p>Pilates-inspired core work, hip flexor release, and thoracic spine mobility drills.</p>
+              <div class="media-meta"><span>⏱ 25 min</span><span>🔥 140 kcal</span></div>
+            </div>
+          </article>
+
+          <article class="media-card" style="background-image:url('images/workout-swim-recover.jpg')">
+            <div class="media-card-top"><span class="tag-pill" style="background:var(--blue-dark);color:var(--blue)">Intermediate</span></div>
+            <span class="media-icon">🏊</span>
+            <div class="media-card-body">
+              <h3>Swim &amp; Recover</h3>
+              <p>1.5km mixed strokes in the pool, followed by contrast therapy and guided stretching.</p>
+              <div class="media-meta"><span>⏱ 60 min</span><span>🔥 500 kcal</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">+</span> Vitae
+        </a>
+        <p class="footer-tagline">Your holistic guide to living well — body, mind and spirit in harmony.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter / X" class="social-link">𝕏</a>
+          <a href="#" aria-label="Instagram" class="social-link">IG</a>
+          <a href="#" aria-label="YouTube" class="social-link">YT</a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Explore">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="mental-wellness.html">Mental Wellness</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <a href="#">Meal Plans</a>
+        <a href="#">Workout Library</a>
+        <a href="#">Meditation Guides</a>
+        <a href="#">Sleep Tracker</a>
+      </nav>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Weekly health insights, delivered to your inbox.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn-primary btn-small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <span>© 2026 Vitae Health. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
