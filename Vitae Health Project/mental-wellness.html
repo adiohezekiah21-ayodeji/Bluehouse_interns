@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Wellness — Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <input type="checkbox" id="nav-toggle-checkbox" class="nav-toggle-checkbox">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">+</span> Vitae
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="nutrition.html" class="nav-link">Nutrition</a>
+        <a href="fitness.html" class="nav-link">Fitness</a>
+        <a href="mental-wellness.html" class="nav-link nav-link--active">Mental Wellness</a>
+      </nav>
+
+      <a href="#" class="btn btn-primary btn-small">Start Journey</a>
+
+      <label for="nav-toggle-checkbox" class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="inner-hero" style="background-image:url('images/mental1.png')">
+      <div class="container">
+        <p class="tag-pill tag-pill--mental">🧠 Mental Wellness</p>
+        <h1 class="inner-hero-title">Inner peace is <em class="text-purple">a practice.</em></h1>
+        <p class="inner-hero-sub">
+          Evidence-based tools for a quieter mind, deeper sleep, and a more
+          resilient emotional life.
+        </p>
+        <a href="#practices" class="btn btn-primary">Begin Practice</a>
+      </div>
+    </section>
+
+    <!-- ===== WELLNESS PILLARS ===== -->
+    <section class="content-section">
+      <div class="container">
+        <p class="eyebrow eyebrow--section">Wellness Pillars</p>
+        <h2 class="section-title">Your mental health landscape</h2>
+
+        <div class="info-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="info-card">
+            <div class="info-icon">🧠</div>
+            <h3>Cognitive Health</h3>
+            <p>Neuroplasticity exercises and focus training</p>
+            <div class="progress-track"><div class="progress-fill progress-fill--purple" style="width:78%"></div></div>
+            <span class="progress-value progress-value--purple">78%</span>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">💙</div>
+            <h3>Emotional Balance</h3>
+            <p>Mood regulation and resilience building</p>
+            <div class="progress-track"><div class="progress-fill progress-fill--blue" style="width:64%"></div></div>
+            <span class="progress-value progress-value--blue">64%</span>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">😴</div>
+            <h3>Sleep Quality</h3>
+            <p>Deep rest and circadian rhythm alignment</p>
+            <div class="progress-track"><div class="progress-fill progress-fill--yellow" style="width:91%"></div></div>
+            <span class="progress-value progress-value--yellow">91%</span>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🔗</div>
+            <h3>Social Connection</h3>
+            <p>Relationships and community practices</p>
+            <div class="progress-track"><div class="progress-fill progress-fill--pink" style="width:55%"></div></div>
+            <span class="progress-value progress-value--pink">55%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUOTE ===== -->
+    <section class="content-section" style="padding-top:0;">
+      <div class="container">
+        <div class="quote-block">
+          <p class="quote-text">As a man thinketh in his heart, so is he</p>
+          <span class="quote-author">— Solomon</span>
+          <div class="quote-dots">
+            <span class="is-active"></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRACTICES ===== -->
+    <section class="content-section" id="practices">
+      <div class="container">
+        <p class="eyebrow eyebrow--section">Practices</p>
+        <h2 class="section-title">Daily rituals for the mind</h2>
+
+        <div class="media-grid">
+          <article class="media-card">
+            <div class="card-image" style="background-image:url('images/mental2.png')"></div>
+            <div class="card-content">
+              <div class="media-card-top"><span class="tag-pill tag-pill--mental">Mindfulness</span></div>
+              <h3>🌅 Morning Meditation</h3>
+              <p>Start with intention. Guided breath awareness to ground your nervous system and set a clear focus for the day.</p>
+              <div class="media-meta"><span>⏱ 10 min</span></div>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="card-image" style="background-image:url('images/mental3.png')"></div>
+            <div class="card-content">
+              <div class="media-card-top"><span class="tag-pill" style="background:var(--teal-dark);color:var(--teal)">Breathwork</span></div>
+              <h3>🫁 Box Breathing</h3>
+              <p>Navy SEAL technique. 4 counts in, 4 hold, 4 out, 4 hold. Activates the parasympathetic nervous system instantly.</p>
+              <div class="media-meta"><span>⏱ 5 min</span></div>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="card-image" style="background-image:url('images/mental4.png')"></div>
+            <div class="card-content">
+              <div class="media-card-top"><span class="tag-pill" style="background:var(--blue-dark);color:var(--blue)">Recovery</span></div>
+              <h3>🌙 Sleep Ritual</h3>
+              <p>Body scan, progressive muscle relaxation, and a gratitude reflection to ease into restorative deep sleep.</p>
+              <div class="media-meta"><span>⏱ 20 min</span></div>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="card-image" style="background-image:url('images/mental5.png')"></div>
+            <div class="card-content">
+              <div class="media-card-top"><span class="tag-pill" style="background:var(--pink-dark);color:var(--pink)">Reflection</span></div>
+              <h3>✍️ Journaling Prompt</h3>
+              <p>Structured prompts for emotional processing, goal clarity, and self-compassion. Pen over screen, always.</p>
+              <div class="media-meta"><span>⏱ 15 min</span></div>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="card-image" style="background-image:url('images/mental6.png')"></div>
+            <div class="card-content">
+              <div class="media-card-top"><span class="tag-pill tag-pill--nutrition">Grounding</span></div>
+              <h3>🌿 Nature Walk</h3>
+              <p>A mindful forest bathing walk — leave headphones behind. Engage all senses. Cortisol drops measurably.</p>
+              <div class="media-meta"><span>⏱ 30 min</span></div>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="card-image" style="background-image:url('images/mental7.png')"></div>
+            <div class="card-content">
+              <div class="media-card-top"><span class="tag-pill tag-pill--fitness">Boundaries</span></div>
+              <h3>📵 Digital Detox Hour</h3>
+              <p>One screen-free hour per day. Read, cook, stretch, or simply be. Your dopamine receptors will thank you.</p>
+              <div class="media-meta"><span>⏱ 60 min</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">+</span> Vitae
+        </a>
+        <p class="footer-tagline">Your holistic guide to living well — body, mind and spirit in harmony.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter / X" class="social-link">𝕏</a>
+          <a href="#" aria-label="Instagram" class="social-link">IG</a>
+          <a href="#" aria-label="YouTube" class="social-link">YT</a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Explore">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="mental-wellness.html">Mental Wellness</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <a href="#">Meal Plans</a>
+        <a href="#">Workout Library</a>
+        <a href="#">Meditation Guides</a>
+        <a href="#">Sleep Tracker</a>
+      </nav>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Weekly health insights, delivered to your inbox.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn-primary btn-small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <span>© 2026 Vitae Health. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

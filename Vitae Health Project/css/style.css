@@ -1,0 +1,1042 @@
+/* =========================================================
+   VITAE — Design Tokens
+   
+   ========================================================= */
+:root {
+  /* Backgrounds */
+  --bg: #070f0a;
+  --bg-soft: #0b1712;
+  --bg-card: #0e1a14;
+
+  /* Greens */
+  --green: #2fe783;      /* bright mint — headings, eyebrows, numbers */
+  --green-mid: #2cb15d;  /* button fill */
+  --green-dark: #123b22; /* active nav pill / dark fills */
+  --green-line: rgba(47, 231, 131, 0.25);
+
+  /* Accent */
+  --orange: #d8593a;
+
+  /* Text */
+  --text-white: #f4f2ea;
+  --text-gray: #8a978f;
+  --text-gray-soft: #5e6b63;
+
+  /* Type */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --container-w: 1200px;
+  --radius-pill: 999px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+}
+
+/* =========================================================
+   Reset
+   ========================================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font: inherit; cursor: pointer; }
+input { font: inherit; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: var(--container-w);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* Faint dot-grid texture used behind the hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-image:
+  radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 700px;
+  background: radial-gradient(closest-side, rgba(47, 231, 131, 0.18), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:hover { transform: translateY(-1px); color: inherit; }
+
+.btn-primary {
+  background: var(--green-mid);
+  color: #06170d;
+}
+.btn-primary:hover { background: var(--orange); }
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(244, 242, 234, 0.25);
+  color: var(--text-white);
+}
+.btn-outline:hover { border-color: var(--text-white); background: var(--orange); color: #06170d; }
+
+.btn-small {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(7, 15, 10, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-header:hover { background: rgba(185, 148, 38, 0.95); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 76px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-white);
+  margin-right: auto;
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #06170d;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link {
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-black);
+  transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.nav-link:hover { color: var(--text-white); transform: translateY(-3px) scale(1.05); }
+
+.nav-link--active {
+  background: var(--green-dark);
+  color: var(--green);
+}
+
+.nav-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  order: 4;
+}
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--text-white);
+}
+
+.nav-toggle-checkbox:checked ~ .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle-checkbox:checked ~ .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav-toggle-checkbox:checked ~ .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 110px;
+  padding-bottom: 90px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-dark);
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 28px;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.eyebrow--section {
+  background: none;
+  padding: 0;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 6.8vw, 5.5rem);
+  line-height: 1.05;
+  max-width: 760px;
+  color: var(--text-white);
+}
+
+.hero-title em {
+  color: var(--green);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero-sub {
+  max-width: 560px;
+  margin-top: 24px;
+  color: var(--text-gray);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  margin-top: 72px;
+}
+
+.stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: var(--green);
+}
+
+.stat-num:hover { color: var(--orange); transform: translate(-5px, -5px); }
+
+.stat-label {
+  margin-left: 0;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--text-gray-soft);
+}
+
+.stat-label:hover { color: var(--text-white); }
+
+/* =========================================================
+   Section titles (shared)
+   ========================================================= */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  color: var(--text-white);
+  margin-bottom: 40px;
+}
+
+.featured, .explore {
+  padding-block: 90px;
+}
+
+/* =========================================================
+   Featured carousel — pure CSS, no JS.
+   Driven by 3 hidden radio inputs (.carousel-radio) that sit as
+   DOM siblings BEFORE .carousel-track / .carousel-controls, so
+   the ~ (general sibling) selector can react to :checked.
+   ========================================================= */
+.carousel { position: relative; }
+
+.carousel-radio {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.carousel-track {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.carousel-slide {
+  display: none;
+  position: relative;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Show slide N only while radio N is checked */
+#feature-slide-1:checked ~ .carousel-track .carousel-slide:nth-child(1),
+#feature-slide-2:checked ~ .carousel-track .carousel-slide:nth-child(2),
+#feature-slide-3:checked ~ .carousel-track .carousel-slide:nth-child(3) {
+  display: flex;
+}
+
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(4, 10, 7, 0.92) 0%, rgba(4, 10, 7, 0.15) 65%);
+  border-radius: var(--radius-lg);
+}
+
+.tag, .slide-title, .slide-desc { position: relative; z-index: 1; }
+
+.tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.tag--fitness { background: var(--orange); color: #1a0902; }
+.tag--nutrition { background: var(--green); color: #06170d; }
+.tag--mental-wellness { background: var(--purple); color: #1f1033; }
+
+.slide-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  max-width: 520px;
+  margin-bottom: 10px;
+}
+
+.slide-desc {
+  color: rgba(244, 242, 234, 0.75);
+  max-width: 460px;
+  font-size: 0.95rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.dots { display: flex; gap: 8px; }
+
+.dots label {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(244, 242, 234, 0.25);
+  cursor: pointer;
+  transition: width 0.15s ease, background 0.15s ease;
+}
+
+/* Highlight the dot matching the active slide */
+#feature-slide-1:checked ~ .carousel-controls .dots label:nth-child(1),
+#feature-slide-2:checked ~ .carousel-controls .dots label:nth-child(2),
+#feature-slide-3:checked ~ .carousel-controls .dots label:nth-child(3) {
+  width: 26px;
+  border-radius: var(--radius-pill);
+  background: var(--green);
+}
+
+.arrows { display: none; gap: 10px; }
+
+/* Only the arrow-group belonging to the active slide is shown */
+#feature-slide-1:checked ~ .carousel-controls .arrows-for-1,
+#feature-slide-2:checked ~ .carousel-controls .arrows-for-2,
+#feature-slide-3:checked ~ .carousel-controls .arrows-for-3 {
+  display: flex;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--green-line);
+  background: var(--green-dark);
+  color: var(--green);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.arrow-btn:hover { background: rgba(47, 231, 131, 0.18); }
+
+/* =========================================================
+   Explore grid
+   Image sits on top, full and unobstructed. Text lives in its
+   own solid panel below — nothing overlays the photo.
+   ========================================================= */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg-card);
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: transform 0.2s ease;
+}
+
+.explore-card:hover {
+   transform: translateY(-4px) scale(1.02);
+   box-shadow: 0 4px 20px hsl(56, 85%, 44%);
+}
+
+
+
+.card-content {
+  padding: 22px 24px;
+}
+
+.card-eyebrow {
+  font-size: 0.90rem;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-link {
+  font-size: 0.90rem;
+  color: var(--text-gray);
+}
+
+.explore-card:hover .card-link { color: var(--green); }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-soft);
+  padding-top: 70px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.footer-tagline {
+  color: var(--text-gray);
+  font-size: 0.92rem;
+  margin: 16px 0 20px;
+  max-width: 280px;
+}
+
+.socials { display: flex; gap: 12px; }
+
+.social-link {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-gray);
+}
+.social-link:hover { color: var(--green); border-color: var(--green-line); }
+
+.footer-col h4,
+.footer-newsletter h4 {
+  font-size: 0.90rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col a {
+  color: var(--text-gray);
+  font-size: 0.92rem;
+}
+.footer-col a:hover { color: var(--text-white); }
+
+.footer-newsletter p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  max-width: 260px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  padding: 10px 16px;
+  color: var(--text-white);
+  font-size: 0.90rem;
+}
+.newsletter-form input::placeholder { color: var(--text-gray-soft); }
+.newsletter-form input:focus { outline: none; border-color: var(--green); }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.90rem;
+  color: var(--text-gray-soft);
+}
+
+.legal-links { display: flex; gap: 20px; }
+.legal-links a:hover { color: var(--text-white); }
+
+/* =========================================================
+   Extra accent colors (inner pages)
+   ========================================================= */
+:root {
+  --purple: #a78bfa;
+  --purple-dark: #241c3d;
+  --blue: #5fb3e8;
+  --blue-dark: #142433;
+  --yellow: #e8c25f;
+  --yellow-dark: #332a12;
+  --pink: #e872ac;
+  --pink-dark: #331a26;
+  --teal: #5fe8c8;
+  --teal-dark: #12332c;
+  --orange-dark: #331d12;
+}
+
+/* =========================================================
+   Inner page hero (Nutrition / Fitness / Mental Wellness)
+   ========================================================= */
+.inner-hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.inner-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6,10,8,0.96) 15%, rgba(6,10,8,0.55) 55%, rgba(6,10,8,0.25) 100%);
+}
+
+.inner-hero .container {
+  position: relative;
+  z-index: 1;
+  padding-block: 70px;
+}
+
+.inner-hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  line-height: 1.12;
+  max-width: 640px;
+  color: var(--text-white);
+  margin-top: 22px;
+}
+
+.inner-hero-title em { font-style: italic; font-weight: 600; }
+
+.inner-hero-sub {
+  max-width: 480px;
+  margin-top: 20px;
+  color: rgba(244, 242, 234, 0.8);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.inner-hero .btn { margin-top: 32px; }
+
+/* Tag pill variants, used in hero badges + card tags */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.90rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.tag-pill--nutrition { background: var(--green-dark); color: var(--green); }
+.tag-pill--fitness    { background: var(--orange-dark); color: var(--orange); }
+.tag-pill--mental     { background: var(--purple-dark); color: var(--purple); }
+
+.inner-hero-title em.text-green  { color: var(--green); }
+.inner-hero-title em.text-orange { color: var(--orange); }
+.inner-hero-title em.text-purple { color: var(--purple); }
+
+/* =========================================================
+   Generic content section
+   ========================================================= */
+.content-section { padding-block: 90px; }
+.content-section + .content-section { padding-top: 0; }
+
+/* =========================================================
+   Simple info cards (Nutrition principles / stat pillars)
+   ========================================================= */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  transition: all 0.2s ease;
+}
+
+.info-card:hover,
+.info-card:hover h3,
+.info-card:hover p {
+  transform: translateY(-10px) scale(1.02);
+  background-color: #90EE90;
+  color: black;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  margin-bottom: 18px;
+}
+
+.info-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+
+
+.info-card p {
+  color: var(--text-gray);
+  font-size: 0.90rem;
+  line-height: 1.6;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+
+
+/* Progress bar variant, used on Mental Wellness pillar cards */
+.progress-track {
+  margin-top: 20px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+}
+.progress-fill--purple { background: var(--purple); }
+.progress-fill--blue   { background: var(--blue); }
+.progress-fill--yellow { background: var(--yellow); }
+.progress-fill--pink   { background: var(--pink); }
+
+.progress-value {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.90rem;
+  font-weight: 700;
+}
+.progress-value--purple { color: var(--purple); }
+.progress-value--blue   { color: var(--blue); }
+.progress-value--yellow { color: var(--yellow); }
+.progress-value--pink   { color: var(--pink); }
+
+/* =========================================================
+   Quote block (Mental Wellness)
+   ========================================================= */
+.quote-block {
+  position: relative;
+  background: var(--bg-card);
+  border-left: 3px solid var(--purple);
+  border-radius: var(--radius-md);
+  padding: 48px 56px;
+  text-align: center;
+}
+
+.quote-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+  color: var(--text-white);
+  max-width: 640px;
+  margin-inline: auto;
+  line-height: 1.5;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 18px;
+  color: var(--purple);
+  font-size: 0.90rem;
+}
+
+.quote-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 26px;
+}
+.quote-dots span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+}
+.quote-dots span.is-active {
+  width: 22px;
+  border-radius: var(--radius-pill);
+  background: var(--purple);
+}
+
+/* =========================================================
+   Media cards (Recipes / Workouts / Practices)
+   Same pattern as .explore-card: full image on top, solid
+   content panel below — nothing overlaps the photo.
+   ========================================================= */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: transform 0.2s ease;
+  overlay: auto;
+}
+
+.media-card:hover{ 
+  transform: translateY(-5px) scale(1.05);
+  border-color: hsl(115, 97%, 48%);
+  box-shadow: 0 4px 20px hsl(115, 97%, 48%);
+  
+}
+
+.media-card .card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.media-card-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+}
+
+.media-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.media-card p {
+  color: rgba(244,242,234,0.75);
+  font-size: 0.90rem;
+  line-height: 1.55;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.media-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.90rem;
+  color: rgba(244,242,234,0.8);
+  margin-top: auto;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.media-meta span { display: inline-flex; align-items: center; gap: 5px; }
+
+
+
+/* =========================================================
+   Training schedule (Fitness)
+   ========================================================= */
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 14px;
+}
+
+.day-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  padding: 18px 10px;
+  text-align: center;
+  border-color: hsl(115, 97%, 48%);
+  box-shadow: 0 4px 20px hsl(115, 97%, 48%);
+  
+}
+
+.day-card:hover{
+  transform: translateY(-5px) scale(1.05);
+  border-color: hsl(69, 97%, 48%);
+  box-shadow: 0 4px 20px hsl(56, 62%, 45%);
+  filter: brightness(1.3);
+  box-shadow: 0 0 12px 2px var(--bar-color);
+}
+
+
+.day-card:hover .day-bar-fill{
+  transform: translateY(-5px) scale(1.05);
+  border-color: hsl(69, 97%, 48%);
+  box-shadow: 0 4px 20px hsl(56, 62%, 45%);
+  filter: brightness(1.3);
+  box-shadow: 0 0 12px 2px var(--bar-color);
+
+}
+
+
+
+.day-name {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-gray-soft);
+  margin-bottom: 14px;
+}
+
+.day-bar-track {
+  height: 73px;
+  width: 18px;
+  margin-inline: auto;
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+
+
+.day-bar-fill { width: 100%; border-radius: var(--radius-pill);
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-type {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--text-gray);
+}
+
+
+/* =========================================================
+   Responsive (inner-page components)
+   ========================================================= */
+@media (max-width: 900px) {
+  .info-grid { grid-template-columns: repeat(2, 1fr); }
+  .day-grid { grid-template-columns: repeat(4, 1fr); row-gap: 14px; }
+}
+
+@media (max-width: 760px) {
+  .info-grid { grid-template-columns: 1fr; }
+  .media-grid { grid-template-columns: 1fr; }
+  .day-grid { grid-template-columns: repeat(3, 1fr); }
+  .quote-block { padding: 32px 24px; }
+  .inner-hero { min-height: 520px; }
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px) {
+  .header-inner { flex-wrap: wrap; }
+  .logo { order: 1; }
+  .nav-toggle { display: flex; order: 2; }
+  .btn.btn-small.btn-primary { display: none; }
+
+  .main-nav {
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  /* No JS: the hidden checkbox (a sibling before .main-nav) drives this */
+  .nav-toggle-checkbox:checked ~ .main-nav {
+    max-height: 320px;
+    padding-bottom: 14px;
+  }
+
+  .explore-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .stats { gap: 32px; row-gap: 24px; }
+  .carousel-slide { min-height: 340px; padding: 26px; }
+}
