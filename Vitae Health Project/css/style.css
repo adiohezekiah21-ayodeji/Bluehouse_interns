@@ -142,7 +142,7 @@ input { font: inherit; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.site-header:hover { background: rgba(185, 148, 38, 0.95); }
+.site-header:hover { background: #254106f2; }
 
 .header-inner {
   display: flex;
@@ -190,7 +190,7 @@ input { font: inherit; }
   transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
-.nav-link:hover { color: var(--text-white); transform: translateY(-3px) scale(1.05); }
+.nav-link:hover { color: var(--text-black); transform: translateY(-3px) scale(1.05); }
 
 .nav-link--active {
   background: var(--green-dark);
@@ -238,7 +238,7 @@ input { font: inherit; }
   gap: 8px;
   background: var(--green-dark);
   color: var(--green);
-  font-size: 0.78rem;
+  font-size: 1.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -280,7 +280,7 @@ input { font: inherit; }
   max-width: 560px;
   margin-top: 24px;
   color: var(--text-gray);
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   line-height: 1.7;
 }
 
@@ -301,8 +301,8 @@ input { font: inherit; }
 .stat-num {
   display: block;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.9rem;
+  font-weight: 900;
+  font-size: 3.5rem;
   color: var(--green);
 }
 
@@ -311,7 +311,7 @@ input { font: inherit; }
 .stat-label {
   margin-left: 0;
   margin-top: 4px;
-  font-size: 0.85rem;
+  font-size: 1.85rem;
   color: var(--text-gray-soft);
 }
 
@@ -495,7 +495,7 @@ input { font: inherit; }
 
 .explore-card:hover {
    transform: translateY(-4px) scale(1.02);
-   box-shadow: 0 4px 20px hsl(56, 85%, 44%);
+   box-shadow: 0 4px 10px hsl(123, 85%, 44%);
 }
 
 
@@ -737,7 +737,7 @@ input { font: inherit; }
 .info-card:hover h3,
 .info-card:hover p {
   transform: translateY(-10px) scale(1.02);
-  background-color: #90EE90;
+  background-color: #3c693c;
   color: black;
   transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
@@ -866,13 +866,14 @@ input { font: inherit; }
   background: var(--bg-card);
   transition: transform 0.2s ease;
   overlay: auto;
+  
 }
 
 .media-card:hover{ 
   transform: translateY(-5px) scale(1.05);
   border-color: hsl(115, 97%, 48%);
-  box-shadow: 0 4px 20px hsl(115, 97%, 48%);
-  
+  box-shadow: 0 4px 4px hsl(115, 97%, 48%);
+  transition: transform 0.2s ease; 
 }
 
 .media-card .card-content {
@@ -931,17 +932,16 @@ input { font: inherit; }
   border-radius: var(--radius-md);
   padding: 18px 10px;
   text-align: center;
-  border-color: hsl(115, 97%, 48%);
-  box-shadow: 0 4px 20px hsl(115, 97%, 48%);
-  
-}
+  box-shadow: 0 0 12px 2px var(--bar-color);
+  border-color: hsl(69, 97%, 48%);
+    
+ }
 
 .day-card:hover{
   transform: translateY(-5px) scale(1.05);
-  border-color: hsl(69, 97%, 48%);
-  box-shadow: 0 4px 20px hsl(56, 62%, 45%);
   filter: brightness(1.3);
-  box-shadow: 0 0 12px 2px var(--bar-color);
+  border-color: hsl(115, 97%, 48%);
+  box-shadow: 0 4px 20px hsl(115, 97%, 48%);
 }
 
 
@@ -957,7 +957,7 @@ input { font: inherit; }
 
 
 .day-name {
-  font-size: 0.72rem;
+  font-size: 1.72rem;
   letter-spacing: 0.06em;
   color: var(--text-gray-soft);
   margin-bottom: 14px;
