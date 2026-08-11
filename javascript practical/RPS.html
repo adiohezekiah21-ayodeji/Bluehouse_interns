@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+		<h3>Rules of the game:</h3>
+		<ul>
+		<li>Rock beats Scissors</li>
+		<li>Scissors beats Paper</li>
+		<li>Paper beats Rock</li>
+		</ul>
+
+    <p>Now play!</p>
+
+    <br>
+
+	<button 
+        
+        onclick="
+
+		let randomNumber = Math.random();
+		let computerMove = '';
+		let result = '';
+		if (randomNumber >= 0 && randomNumber <= 1/3) {
+					computerMove = 'Rock';
+					result = 'we tie, play again';
+		} else if(randomNumber > 1/3 && randomNumber<= 2/3) {
+					computerMove = 'Paper';
+					result = 'you lose';
+		} else if(randomNumber > 2/3 && randomNumber < 1) {
+					computerMove = 'Scissors';
+					result = 'you win';
+		}
+
+		alert(`You chose Rock and Computer chose ${computerMove}. Therefore, ${result}!`);
+		
+
+
+		">
+        Rock
+    </button>
+
+	<button 
+        
+        onclick="
+
+        let randomNumber = Math.random();
+		let computerMove = '';
+		let result = '';
+		if (randomNumber >= 0 && randomNumber <= 1/3) {
+					computerMove = 'Rock';
+					result = 'you win';
+		} else if(randomNumber > 1/3 && randomNumber<= 2/3) {
+					computerMove = 'Paper';
+					result = 'we tie, play again';
+		} else if(randomNumber > 2/3 && randomNumber < 1) {
+					computerMove = 'Scissors';
+					result = 'you lose';
+		}
+
+		alert(`You chose Paper and Computer chose ${computerMove}. Therefore, ${result}!`);
+        ">
+        Paper
+
+    </button>
+
+	<button 
+    
+        onclick="
+
+        let randomNumber = Math.random();
+		let computerMove = '';
+		let result = '';
+		if (randomNumber >= 0 && randomNumber <= 1/3) {
+					computerMove = 'Rock';
+					result = 'you lose';
+		} else if(randomNumber > 1/3 && randomNumber<= 2/3) {
+					computerMove = 'Paper';
+					result = 'you win';
+		} else if(randomNumber > 2/3 && randomNumber < 1) {
+					computerMove = 'Scissors';
+					result = 'we tie, play again';
+		}
+
+		alert(`You chose Scissors and Computer chose ${computerMove}. Therefore, ${result}!`);
+    
+    ">Scissors</button>
+
+    <h2>Score Board</h2>
+
+    <p>You: <button>0</button></p>
+    <p>Computer: <button>0</button></p>
+
+</body>
+</html>
