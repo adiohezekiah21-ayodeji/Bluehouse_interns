@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("laptopbg.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+.shopping-container {
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    cursor: pointer;
+}
+
+#addButton {
+    font-weight: bold;
+}
+
+#shoppingList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#shoppingList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.purchased {
+    text-decoration: line-through;
+}
+
+.text{
+    font-family: cursive;
+}

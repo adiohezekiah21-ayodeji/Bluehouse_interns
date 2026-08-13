@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>Hezekiah Tech Store</h2>
+
+        <ul class="nav-link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+
+        <h1>My Shopping List</h1>
+
+        <p>
+            Add items to your shopping list, edit them, mark them as purchased,
+            and remove them whenever you want.
+        </p>
+        <br>
+        
+        <p class="text">We know you have different laptops to purchase on your mind. Add them to your shopping list so that you won't forget. Whenever you're ready, you can contact us to confirm availabilty and book your order, get it delivered and wait for the next delivery from us.</p>
+
+        <p class="text">We'll be glad to have you shop with us! Do have a nice customer experience!</p>
+
+    </header>
+
+    <section class="shopping-container">
+
+        <div class="input-section">
+
+            <input
+                type="text"
+                id="itemInput"
+                placeholder="Enter an item"
+            >
+
+            <button id="addButton">
+                Add Item
+            </button>
+
+        </div>
+
+        <ul id="shoppingList"></ul>
+
+    </section>
+
+    <script src="shoppingList.js"></script>
+
+</body>
+</html>
